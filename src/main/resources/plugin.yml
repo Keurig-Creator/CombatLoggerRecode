@@ -1,0 +1,7 @@
+name: Combatlogger
+version: ${project.version}
+main: com.keurig.combatlogger.CombatLogger
+api-version: 1.16
+softdepend: [Factions, FactionsX]
+authors: [Keurig]
+description: A simple combat logger plugin!
