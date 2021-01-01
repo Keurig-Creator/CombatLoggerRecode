@@ -1,6 +1,7 @@
 package com.keurig.combatlogger
 
 import com.keurig.combatlogger.listeners.AttackListener
+import com.keurig.combatlogger.listeners.LeaveListener
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
 
@@ -14,6 +15,7 @@ class CombatLogger : JavaPlugin() {
         instance = this
 
         Bukkit.getPluginManager().registerEvents(AttackListener(), this)
+        Bukkit.getPluginManager().registerEvents(LeaveListener(), this)
     }
 
 
