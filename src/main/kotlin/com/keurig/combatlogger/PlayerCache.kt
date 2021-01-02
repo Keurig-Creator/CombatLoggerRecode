@@ -1,13 +1,16 @@
 package com.keurig.combatlogger
 
+import com.keurig.combatlogger.utils.Chat
 import org.bukkit.entity.Player
 import java.util.*
 
 class PlayerCache {
 
+    lateinit var player: Player
+
     var tagged: Boolean = false
         set(value) {
-            println("df")
+            addCombat(player)
             field = value
         }
 
@@ -24,6 +27,15 @@ class PlayerCache {
 
             return cache
         }
+    }
+
+    private fun addCombat(player: Player) {
+        if (!tagged)
+            player.sendMessage(Chat.color("&cYou are now in combat!"))
+    }
+
+    private fun removeCombat(player: Player) {
+
     }
 
 }

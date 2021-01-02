@@ -1,6 +1,6 @@
 package com.keurig.combatlogger.listeners
 
-import com.keurig.combatlogger.utils.Chat
+import com.keurig.combatlogger.PlayerCache
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
@@ -11,10 +11,12 @@ class AttackListener : Listener {
     @EventHandler
     fun onAttack(event: EntityDamageByEntityEvent) {
         if (event.damager is Player && event.entity is Player) {
-            var player = event.damager
-            var entity = event.entity
 
-            player.sendMessage(Chat.color("&cur &amom &1is &9GAE"))
+            val playerCache: PlayerCache = PlayerCache.getCache(event.damager as Player)
+            val targetCache: PlayerCache = PlayerCache.getCache(event.entity as Player)
+
+            playerCache.tagged = true
+            targetCache.tagged = true
         }
     }
 
