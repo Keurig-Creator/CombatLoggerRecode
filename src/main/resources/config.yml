@@ -1,0 +1,6 @@
+# config version: Converts version 1 config version 2 (DO NOT CHANGE)
+version: 2
+
+punishment:
+  - "BAN:70:&cYou logged out during combat \n Please wait {timeRemaining}"
+  - "KICK"
