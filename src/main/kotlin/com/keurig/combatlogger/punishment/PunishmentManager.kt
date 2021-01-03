@@ -9,7 +9,8 @@ import org.bukkit.plugin.Plugin
 class PunishmentManager(private val plugin: CombatLogger) {
 
     init {
-        initializeDefault()
+        registerPunishment(BanPunishment(), plugin)
+        registerPunishment(KickPunishment())
     }
 
     companion object {
@@ -24,11 +25,6 @@ class PunishmentManager(private val plugin: CombatLogger) {
             Bukkit.getPluginManager().registerEvents(punishment, plugin)
             registerPunishment(punishment)
         }
-    }
-
-    private fun initializeDefault() {
-        registerPunishment(BanPunishment(), plugin)
-        registerPunishment(KickPunishment())
     }
 
     fun unregisterPunishments() {
