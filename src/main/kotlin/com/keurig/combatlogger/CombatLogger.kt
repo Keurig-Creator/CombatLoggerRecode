@@ -10,8 +10,9 @@ class CombatLogger : JavaPlugin() {
 
     companion object Singleton {
         lateinit var instance: CombatLogger
-        lateinit var punishmentManager: PunishmentManager
     }
+
+    lateinit var punishmentManager: PunishmentManager
 
     override fun onEnable() {
         instance = this
