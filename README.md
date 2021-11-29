@@ -1,5 +1,5 @@
 # Moved to another REPO
- I have decided to just use java and recode it entirely the new REPO will be updated soon
+   Recode can be found here https://github.com/Keurig-Creator/Combatlogger/tree/Recode
 
 # CombatLoggerRecode
  Recode of CombatLogger in Kotlin
